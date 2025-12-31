@@ -1,0 +1,171 @@
+body {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  font-optical-sizing: auto !important;
+  font-weight: weight !important;
+  font-style: normal !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+}
+
+.index-head {
+  position: relative;
+  margin-top: 1.5rem;
+}
+
+.card-container {
+  margin-top: 2rem !important;
+}
+
+/* navbar */
+.navbar {
+  margin: 0rem 2rem;
+  height: 5rem;
+  background-color: white;
+}
+
+.fa-compass {
+  color: #fe424d;
+  font-size: 2.5rem;
+}
+
+.nav-link {
+  color: #222222 !important;
+  font-weight: 500 !important;
+}
+
+/* footer */
+
+.f-info {
+  background-color: #ece3e3;
+  padding: 0.2rem;
+}
+
+.f-info-socials,
+.f-info-brand,
+.f-info-links {
+  display: flex;
+  justify-content: center;
+}
+
+.f-info-socials i {
+  margin: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.f-info-brand {
+  font-weight: 500;
+}
+
+.f-info-links a {
+  text-decoration: none;
+  padding: 0.3rem;
+}
+
+/* listing card */
+
+.listing-card {
+  border: none !important;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card-img-top {
+  border-radius: 1rem !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}
+
+.card-body {
+  padding: 0 !important;
+}
+
+.card-text {
+  font-weight: 400 !important;
+}
+
+.listing-link {
+  border-radius: 1rem;
+  text-decoration: none;
+}
+
+/* Card Effect */
+
+.card-img-overlay {
+  opacity: 0;
+}
+
+/* .card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: white;
+} */
+/* chatgpt */
+
+.card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-radius: 2rem;
+  padding: 1.5rem;
+}
+
+.card:hover {
+  transform: scale(1.03); /* Zoom effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds shadow */
+  border-radius: 2rem;
+}
+
+/* New Page */
+
+.new-head {
+  position: relative;
+  margin: 1.2rem 0rem 1rem 0rem;
+}
+
+.add-btn {
+  background-color: #fe424d !important;
+  border: none !important;
+}
+/* Edit Page */
+
+.edit-head {
+  position: relative;
+  margin: 1rem 0rem 1rem 0rem;
+}
+
+.edit-btn {
+  background-color: #fe424d !important;
+  border: none !important;
+}
+
+/* Show Page */
+
+.show-img {
+  height: 30vh;
+}
+
+.show-page-btns {
+  display: flex;
+}
+
+.show-page-btn {
+  margin-right: 2rem;
+}
+
+/* Reviews card */
+
+.review-card {
+  padding: 1rem;
+  margin-right: 3rem;
+  /* border: 1px solid #666567 !important; */
+}
+
+/* map */
+#map {
+  height: 400px;
+  width: 90vh;
+}
