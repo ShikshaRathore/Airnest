@@ -27,8 +27,8 @@ module.exports.showListing = async (req, res) => {
 };
 
 module.exports.createListing = async (req, res) => {
-  let url = req.file.path;
-  let filename = req.file.filename;
+  let url = req.file.secure_url;
+  let filename = req.file.public_id;
 
   const newListing = new Listing(req.body.listing);
   newListing.owner = req.user._id;
@@ -56,8 +56,8 @@ module.exports.updateListing = async (req, res) => {
   let listing = await Listing.findByIdAndUpdate(id, { ...req.body.listing }); //deconstructing listing to update
   if (typeof req.file !== "undefined") {
     //if no file choose --> req.file == undefined(typeof btata hai) ---> skip this login to replace image
-    let url = req.file.path;
-    let filename = req.file.filename;
+    let url = req.file.secure_url;
+    let filename = req.file.public_id;
     listing.image = { url, filename };
     await listing.save();
   }

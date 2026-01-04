@@ -1,7 +1,7 @@
-const cloudinary = require("cloudinary").v2;
-const { CloudinaryStorage } = require("multer-storage-cloudinary");
+const cloudinary = require("cloudinary");
+const CloudinaryStorage = require("multer-storage-cloudinary");
 
-cloudinary.config({
+cloudinary.v2.config({
   //config means --> to make them connect
   cloud_name: process.env.CLOUD_NAME,
   api_key: process.env.CLOUD_API_KEY,
@@ -12,11 +12,11 @@ const storage = new CloudinaryStorage({
   cloudinary: cloudinary,
   params: {
     folder: "Airnest_DEV",
-    allowedFormats: ["png", "jpg", "jpeg"], // supports promises as well
+    allowed_formats: ["png", "jpg", "jpeg"],
   },
 });
 
 module.exports = {
-  cloudinary,
+  cloudinary: cloudinary.v2,
   storage,
 };

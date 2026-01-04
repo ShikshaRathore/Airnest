@@ -28,13 +28,13 @@ app.use(methodOverride("_method"));
 app.engine("ejs", ejsMate);
 app.use(express.static(path.join(__dirname, "/public")));
 
-const Mongo_Url = "mongodb://127.0.0.1:27017/Airnest";
+const Mongo_Url = process.env.ATLASDB_URL;
 async function main() {
   await mongoose.connect(Mongo_Url);
 }
 
 const sessionOptions = {
-  secret: "TheBlackWindow",
+  secret: process.env.SECRET,
   resave: false,
   saveUninitialized: true,
   cookie: {
@@ -81,6 +81,6 @@ app.use((err, req, res, next) => {
   let { statusCode = 500, message = "Something Went Wrong!!" } = err;
   res.status(statusCode).render("./listings/error.ejs", { message });
 });
-app.listen(8080, () => {
+app.listen(process.env.PORT, () => {
   console.log("Server is listening on port 8080");
 });
